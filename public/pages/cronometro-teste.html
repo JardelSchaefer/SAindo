@@ -1,0 +1,59 @@
+Código de la página de ejercicio "Cronómetro"
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>Cronómetro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+        * {
+            margin: auto;
+            padding: 0;
+        }
+
+        h1 {
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        #cronometro {
+            padding: 10px;
+            border: 3px blue double;
+            width: 200px;
+            text-align: center
+        }
+
+        #reloj {
+            padding: 5px 10px;
+            width: 170px;
+            border: 1px solid black;
+            font: bold 1.5em digital, europa, arial;
+            text-align: center;
+            margin: 4px
+        }
+
+        #cronometro [type=button] {
+            margin: 4px;
+            font: normal 9pt arial
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CRONÓMETRO con Javascript</h1>
+    <div id="cronometro">
+        <div id="reloj">0 : 00 : 00 : 00</div>
+        <form name="cron" action="#">
+            <input type="button" value="Empezar" name="empieza" />
+            <input type="button" value="Parar" name="para" /><br />
+            <input type="button" value="Continuar" name="continua" />
+            <input type="button" value="Reiniciar" name="reinicia" />
+        </form>
+    </div>
+
+    <script src="../js/cronometro.js" ></script>
+</body>
+
+</html>
