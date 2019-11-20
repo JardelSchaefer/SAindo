@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CronometragemController extends Controller
+class ListagemCronometroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class CronometragemController extends Controller
     public function index()
     {
         //
-       return view("cronometragem.index");
+       return view("listagemCronometro.index");
     }
 
     /**

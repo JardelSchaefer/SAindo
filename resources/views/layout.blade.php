@@ -69,7 +69,7 @@
                                 <div class="nav-item has-sub">
                                     <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Cronometragem</span></a>
                                     <div class="submenu-content">
-                                        <a href="cronometro" class="menu-item">Cronometro</a>
+                                        <a href="cronometragem" class="menu-item">Cronometro</a>
                                         <a href="listagemCronometro" class="menu-item">Listagem</a>
                                     </div>
                                 </div>

@@ -13,8 +13,7 @@ class OperacaoController extends Controller
      */
     public function index()
     {
-        return view('operacao.index');
-
+        //
     }
 
     /**
