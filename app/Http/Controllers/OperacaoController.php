@@ -13,7 +13,8 @@ class OperacaoController extends Controller
      */
     public function index()
     {
-        //
+               return view("operacao.index");
+
     }
 
     /**
@@ -34,7 +35,14 @@ class OperacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $operacao = new \App\Operacao();
+       $operacao->produto_codpro = $request->get('produto_codpro');
+       $operacao->nome = $request->get('nome');
+       $operacao->maquina = $request->get('maquina');
+       $operacao->tipoEstudo = $request->get('tipoEstudo');
+       $operacao->cronometista = $request->get('cronometista');
+       $operacao->save();
+       return "true";
     }
 
     /**
@@ -56,7 +64,8 @@ class OperacaoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $operacao =  \App\Operacao::find($id);
+        return $operacao;
     }
 
     /**
@@ -68,7 +77,14 @@ class OperacaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $operacao = new \App\Operacao();
+       $operacao->produto_codpro = $request->get('produto_codpro');
+       $operacao->nome = $request->get('nome');
+       $operacao->maquina = $request->get('maquina');
+       $operacao->tipoEstudo = $request->get('tipoEstudo');
+       $operacao->cronometista = $request->get('cronometista');
+       $operacao->save();
+       return "true";
     }
 
     /**
@@ -79,6 +95,8 @@ class OperacaoController extends Controller
      */
     public function destroy($id)
     {
-        //
+     $operacao =  \App\Operacao::find($id);
+     $operacao->delete();
+     return "true";
     }
 }

@@ -13,8 +13,8 @@ class CronometragemController extends Controller
      */
     public function index()
     {
-        //
-       return view("cronometragem.index");
+        $cronometros = \App\Cronometragem::get();
+       return view("cronometragem.index", compact($Cronometros));
     }
 
     /**
@@ -35,7 +35,18 @@ class CronometragemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $cronometro = \App\Cronometragem();
+         $cronometro->numdecro = $request->get('numdecro');
+         $cronometro->numleicro = $request->get('numleicro');
+         $cronometro->tempo = $request->get('tempo');
+         $cronometro->tomadaDeTempo_codtom = $request->get('tomadaDeTempo_codtom');
+         $cronometro->tomadaDeTempo_Operacao_codope = $request->get('tomadaDeTempo_Operacao_codope');
+         $cronometro->tomadaDeTempo_Operacao_produto_codpro = $request->get('tomadaDeTempo_Operacao_produto_codpro');
+         $cronometro->elemento_codele = $request->get('elemento_codele');
+         $cronometro->elemento_Operacao_codope = $request->get('elemento_Operacao_codope');
+         $cronometro->elemento_Operacao_produto_codpro = $request->get('elemento_Operacao_produto_codpro');
+         $cronometro->save(); 
+         return "true";
     }
 
     /**
@@ -46,7 +57,7 @@ class CronometragemController extends Controller
      */
     public function show($id)
     {
-        //
+      
     }
 
     /**
@@ -57,7 +68,8 @@ class CronometragemController extends Controller
      */
     public function edit($id)
     {
-        //
+          $cronometro =  \App\Cronometragem::find($id);
+        return $cronometro;
     }
 
     /**
@@ -69,7 +81,18 @@ class CronometragemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $cronometro = \App\Cronometragem();
+         $cronometro->numdecro = $request->get('numdecro');
+         $cronometro->numleicro = $request->get('numleicro');
+         $cronometro->tempo = $request->get('tempo');
+         $cronometro->tomadaDeTempo_codtom = $request->get('tomadaDeTempo_codtom');
+         $cronometro->tomadaDeTempo_Operacao_codope = $request->get('tomadaDeTempo_Operacao_codope');
+         $cronometro->tomadaDeTempo_Operacao_produto_codpro = $request->get('tomadaDeTempo_Operacao_produto_codpro');
+         $cronometro->elemento_codele = $request->get('elemento_codele');
+         $cronometro->elemento_Operacao_codope = $request->get('elemento_Operacao_codope');
+         $cronometro->elemento_Operacao_produto_codpro = $request->get('elemento_Operacao_produto_codpro');
+         $cronometro->save(); 
+         return "true";
     }
 
     /**
@@ -80,6 +103,8 @@ class CronometragemController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $cronometro = \App\Cronometragem::find($id);
+       $cronometro->delete();
+       return "true";
     }
 }

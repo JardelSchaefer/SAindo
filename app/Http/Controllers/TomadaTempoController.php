@@ -4,81 +4,73 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TomadaTempoController extends Controller
+class ProdutoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $tomadasDeTempo = \App\Produto::get();
+        return view('listagemCronometro.index', compact('tomadasDeTempo'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
-        //
+        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $tomadaDeTempo = new \App\TomadaDeTempo();
+        $tomadaDeTempo->Operacao_codope = $request->get('Operacao_codope');
+        $tomadaDeTempo->produtoId = $request->get('produtoId');
+        $tomadaDeTempo->numeroLeitura = $request->get('numeroLeitura');
+        $tomadaDeTempo->data = $request->get('data');
+        $tomadaDeTempo->tomadaDeTempocol = $request->get('tomadaDeTempocol');
+        $tomadaDeTempo->operador = $request->get('operador');
+        $tomadaDeTempo->obs = $request->get('obs');
+
+
+        $tomadaDeTempo->save();
+        return "true";
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $tomadaDeTempo =  \App\TomadaDeTempo::find($id);
+        return $tomadaDeTempo;
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
-        //
+       $tomadaDeTempo = new \App\TomadaDeTempo();
+        $tomadaDeTempo->Operacao_codope = $request->get('Operacao_codope');
+        $tomadaDeTempo->produtoId = $request->get('produtoId');
+        $tomadaDeTempo->numeroLeitura = $request->get('numeroLeitura');
+        $tomadaDeTempo->data = $request->get('data');
+        $tomadaDeTempo->tomadaDeTempocol = $request->get('tomadaDeTempocol');
+        $tomadaDeTempo->operador = $request->get('operador');
+        $tomadaDeTempo->obs = $request->get('obs');
+
+
+        $tomadaDeTempo->save();
+        return "true";
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+             $tomadaDeTempo =  \App\TomadaDeTempo::find($id);
+             $tomadaDeTempo->delete();
+             return "true";
+
     }
 }

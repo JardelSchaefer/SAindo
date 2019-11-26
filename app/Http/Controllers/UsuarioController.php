@@ -13,7 +13,9 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+            $usuarios = \App\Usuario::get();
+               return view("usuario.index", compact('usuarios'));
+
     }
 
     /**
@@ -34,7 +36,16 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    $usuarios = \App\Usuario();
+    $usuarios->nome = $request->get('nome');
+    $usuarios->senha = $request->get('senha');
+    $usuarios->endereco = $request->get('endereco');
+    $usuarios->email = $request->get('email');
+    $usuarios->celular = $request->get('celular');
+    $usuarios->numero = $request->get('numero');
+
+    $usuarios->save();
+    return "true";
     }
 
     /**
@@ -56,7 +67,9 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        //
+      $usuarios = \App\Usuario::find();
+      return $usuarios;
+
     }
 
     /**
@@ -68,7 +81,16 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+     $usuarios = \App\Usuario();
+    $usuarios->nome = $request->get('nome');
+    $usuarios->senha = $request->get('senha');
+    $usuarios->endereco = $request->get('endereco');
+    $usuarios->email = $request->get('email');
+    $usuarios->celular = $request->get('celular');
+    $usuarios->numero = $request->get('numero');
+
+    $usuarios->save();
+    return "true";
     }
 
     /**
@@ -79,6 +101,8 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+     $usuarios = \App\Usuario::find($id);
+     $usuarios->delete();
+     return "true";
     }
 }

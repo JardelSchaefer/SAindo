@@ -12,12 +12,14 @@
     <link rel="icon" href="{{url('/')}}/favicon.ico" type="image/x-icon" />
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <link rel="stylesheet" href="{{url('/')}}/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url('/')}}/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="{{url('/')}}/node_modules/ionicons/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="{{url('/')}}/node_modules/icon-kit/dist/css/iconkit.min.css">
     <link rel="stylesheet" href="{{url('/')}}/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="{{url('/')}}/dist/css/theme.min.css">
     <link rel="stylesheet" href="{{url('/')}}/dist/css/theme.min.css">
     <script src="{{url('/')}}/src/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -79,23 +81,41 @@
             </div>
             
             @yield('conteudo')
+            
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.15.4/bootstrap-table-locale-all.js"></script>
+            <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+            <script>window.jQuery || document.write('<script src="../src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+            <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+            <script src="../node_modules/screenfull/dist/screenfull.js"></script>
+            <script src="../node_modules/amcharts3/amcharts/amcharts.js"></script>
+            <script src="../node_modules/amcharts3/amcharts/gauge.js"></script>
+            <script src="../node_modules/amcharts3/amcharts/serial.js"></script>
+            <script src="../node_modules/amcharts3/amcharts/themes/light.js"></script>
+            <script src="../node_modules/amcharts3/amcharts/plugins/animate/animate.js"></script>
+            <script src="../node_modules/amcharts3/amcharts/pie.js"></script>
+            <script src="../node_modules/ammap3/ammap/ammap.js"></script>
+            <script src="../node_modules/ammap3/ammap/maps/js/usaLow.js"></script>
+            <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+            <script src="../dist/js/theme.min.js"></script>
+            <script src="../js/chart-amcharts.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{url('/')}}/src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-    <script src="{{url('/')}}/node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="{{url('/')}}/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="{{url('/')}}/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    <script src="{{url('/')}}/node_modules/screenfull/dist/screenfull.js"></script>
-    <script src="{{url('/')}}/node_modules/amcharts3/amcharts/amcharts.js"></script>
-    <script src="{{url('/')}}/node_modules/amcharts3/amcharts/gauge.js"></script>
-    <script src="{{url('/')}}/node_modules/amcharts3/amcharts/serial.js"></script>
-    <script src="{{url('/')}}/node_modules/amcharts3/amcharts/themes/light.js"></script>
-    <script src="{{url('/')}}/node_modules/amcharts3/amcharts/plugins/animate/animate.js"></script>
-    <script src="{{url('/')}}/node_modules/amcharts3/amcharts/pie.js"></script>
-    <script src="{{url('/')}}/node_modules/ammap3/ammap/ammap.js"></script>
-    <script src="{{url('/')}}/node_modules/ammap3/ammap/maps/js/usaLow.js"></script>
-    <script src="{{url('/')}}/dist/js/theme.min.js"></script>
-    <script src="{{url('/')}}/js/chart-amcharts.js"></script>
+            <!-- NOSSOS -->
+            <script src="../js/cronometro.js"></script>
+            <script src="../js/controllers/controller.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
             (function (b, o, i, l, e, r) {
@@ -109,20 +129,6 @@
     </script>
 </body>
 
-<!-- //funções javascript -->
-<script type="text/javascript">
-
-    function abrirModalIncluir() {
-
-        $('#modalIncluir').modal('show');
-    }
-
-    function abrirModalEditar() {
-
-        $('#modalEditar').modal('show');
-    }
-
-</script>
 
 </html>
 

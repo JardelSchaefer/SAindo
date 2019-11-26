@@ -1,56 +1,6 @@
 @extends ('layout')
 
 @section ('conteudo')
-<div class="wrapper">
-        <header class="header-top" header-theme="light">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-between">
-                    <div class="top-menu d-flex align-items-center">
-                        <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
-                        <button type="button" id="navbar-fullscreen" class="nav-link"><i
-                                class="ik ik-maximize"></i></button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="page-wrap">
-            <div class="app-sidebar colored">
-                <div class="sidebar-header">
-                    <a class="header-brand" href="index.html">
-                        <div class="logo-img">
-                            <i class="ik ik-clock"></i>
-                        </div>
-                        <span class="text">Cronômetro <br>de processos</span>
-                    </a>
-                    <button type="button" class="nav-toggle"><i data-toggle="expanded"
-                            class="ik ik-toggle-right toggle-icon"></i></button>
-                    <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
-                </div>
-
-                <div class="sidebar-content">
-                    <div class="nav-container">
-                        <nav id="main-menu-navigation" class="navigation-main">
-                            <div class="nav-lavel">Navigation</div>
-                            <div class="nav-item">
-                                <a href="operacao.html"><i class="ik ik-bar-chart-2"></i><span>Operações</span></a>
-                            </div>
-                            <div class="nav-item">
-                                <a href="tarefa.html"><i class="ik ik-menu"></i><span>Tarefas</span> </a>
-                            </div>
-                            <div class="nav-item">
-                                <a href="produto.html"><i class="ik ik-layers"></i><span>Produto</span> </a>
-                            </div>
-                            <div class="nav-item has-sub">
-                                <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Cronometragem</span></a>
-                                <div class="submenu-content">
-                                    <a href="cronometro.html" class="menu-item">Cronometro</a>
-                                    <a href="listagemCronometro.html" class="menu-item">Listagem</a>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
             <div class="main-content col-lg-12" style="width: 100%">
 
                 <div class="text-center col-lg-8" style="margin: auto; margin-top: 50px">
@@ -89,8 +39,6 @@
 
                 </table>
 
-             
-            </div>
             <div id="modalIncluir" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

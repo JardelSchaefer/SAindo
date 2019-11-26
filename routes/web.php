@@ -12,11 +12,13 @@
 */
 
 Route::get('/','indexController@index');
+Route::get('/produtos','ProdutoController@buscarProdutos');
 Route::resource('/cronometragem','CronometragemController');
 //rotas crud
 Route::resource('/operacao','OperacaoController');
 Route::resource('usuario','UsuarioController');
 Route::resource('/produto','ProdutoController');
-Route::resource('sequencia','SequenciaController');
-Route::resource('tomada-Tempo','TomadaTempoController');
+Route::resource('/sequencia','SequenciaController');
+Route::resource('/tomada-Tempo','TomadaTempoController');
 Route::resource('/listagemCronometro','ListagemCronometroController');
+Route::resource('/tarefa','TarefaController');
