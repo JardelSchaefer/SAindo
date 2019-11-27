@@ -116,6 +116,7 @@
             <!-- NOSSOS -->
             <script src="../js/cronometro.js"></script>
             <script src="../js/controllers/controller.js"></script>
+            <script src="../js/controllers/tarefaController.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
             (function (b, o, i, l, e, r) {

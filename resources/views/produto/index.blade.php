@@ -25,6 +25,7 @@
                             </tr>
                         </thead>
                         <tbody id="tabelaProduto">
+                        <!-- viewTabela -->
                         </tbody>
                     </table>
 

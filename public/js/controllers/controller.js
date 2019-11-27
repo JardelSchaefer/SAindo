@@ -68,7 +68,14 @@ function confirmarExclusao (confirma,id,url){
         })
         },
         error:function (argument){
-            alert("falha");
+            $.toast({
+                heading: 'Erro!',
+                text: 'Não foi possível excluir o produto!',
+                position: 'top-right',
+                icon: 'error',
+                hideAfter: 3000,
+           
+            })
         }
       });
             }
@@ -90,7 +97,14 @@ urlEditar = urlEdicao;
             
         },
         error:function (argument){
-            alert("falha");
+            $.toast({
+                heading: 'Atenção!',
+                text: 'Erro na solicitação, tente novamente!',
+                position: 'top-right',
+                icon: 'error',
+                hideAfter: 3000,
+           
+            })
         }
       });
 
@@ -117,7 +131,14 @@ function salvarEdicaoProduto() {
             atualizarTabelaProduto();
         },
         error:function (argument){
-            alert("falha");
+            $.toast({
+                heading: 'Erro!',
+                text: 'Não foi possível editar o produto!',
+                position: 'top-right',
+                icon: 'error',
+                hideAfter: 3000,
+           
+            })
         }
       });
 

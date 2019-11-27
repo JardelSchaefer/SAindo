@@ -13,6 +13,7 @@
 
 Route::get('/','indexController@index');
 Route::get('/produtos','ProdutoController@buscarProdutos');
+Route::get('/tarefas','TarefaController@buscarTarefas');
 Route::resource('/cronometragem','CronometragemController');
 //rotas crud
 Route::resource('/operacao','OperacaoController');

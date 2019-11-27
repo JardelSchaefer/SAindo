@@ -20,20 +20,8 @@
 
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>
-                                    <a class="btn btn-danger">
-                                        <i class="ik ik-trash"></i> Excluir
-                                    </a>
-                                    <button onclick="abrirModalEditar();" class="btn btn-primary">
-                                        <i class="ik ik-edit"></i> Editar
-                                    </button>
-                                </td>
+                        <tbody id="tabelaTarefa">
 
-                            </tr>
                         </tbody>
                     </table>
 
@@ -51,13 +39,50 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+            <div class="modal-body">
                     <form>
+
+                    
                         <div class="form-group col-md-12">
                             <label for="exampleInputEmail1">Nome</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" placeholder="Nome">
                         </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Ritmo</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                    
+
+                    
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Interferência</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Concessões</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                  
+
+                                       
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Quantidade de vezes</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Por peça</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                   
+
+                        
+
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -78,12 +103,47 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="form-group col-md-12">
+                    <form id="formEditar" method="post" action="">
+
+                    @csrf
+                    @method('patch')
+                    <div class="form-group col-md-12">
                             <label for="exampleInputEmail1">Nome</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
+                            <input type="email" class="form-control" id="nomeTarefa"
                                 aria-describedby="emailHelp" placeholder="Nome">
                         </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Ritmo</label>
+                            <input type="email" class="form-control" id="ritmoTarefa"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                    
+
+                    
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Interferência</label>
+                            <input type="email" class="form-control" id="interferenciaTarefa"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Concessões</label>
+                            <input type="email" class="form-control" id="concecessaoTarefa"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                  
+
+                                       
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Quantidade de vezes</label>
+                            <input type="email" class="form-control" id="QtdTarefa"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="exampleInputEmail1">Por peça</label>
+                            <input type="email" class="form-control" id="porPcTarefa"
+                                aria-describedby="emailHelp" placeholder="Nome">
+                        </div>
+                   
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -99,9 +159,7 @@
     function abrirModalIncluir() {
         $('#modalIncluir').modal('show');
     }
-    function abrirModalEditar() {
-        $('#modalEditar').modal('show');
-    }
+
 </script>
 
 

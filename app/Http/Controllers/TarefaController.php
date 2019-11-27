@@ -13,6 +13,12 @@ class TarefaController extends Controller
 
     }
 
+    public function buscarTarefas(){
+        $tarefas = \App\Tarefa::get();
+        return view('tarefa.corpoTabela', compact('tarefas'));
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -53,7 +59,8 @@ class TarefaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tarefa =  \App\Tarefa::find($id);
+        return $tarefa;
     }
 
     /**
