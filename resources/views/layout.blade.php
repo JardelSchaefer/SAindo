@@ -117,7 +117,10 @@
             <script src="../js/cronometro.js"></script>
             <script src="../js/controllers/controller.js"></script>
             <script src="../js/controllers/tarefaController.js"></script>
+<<<<<<< HEAD
             <script src="../js/controllers/operacaocontroller.js"></script>
+=======
+>>>>>>> origin/master
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
             (function (b, o, i, l, e, r) {

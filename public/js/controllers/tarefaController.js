@@ -21,6 +21,7 @@ function atualizarTabelaTarefas (){
 
 }
 
+<<<<<<< HEAD
 function buscarTarefa(url, urlEdicao){
 
     urlEditar = urlEdicao;
@@ -33,6 +34,25 @@ function buscarTarefa(url, urlEdicao){
             success: function(data) {
                 abrirModalEditarTarefa();
                 $('#nomeTarefa').val(data.nome);
+=======
+function buscarTarefa(url, urlEdicao){ 
+
+    urlEditar = urlEdicao;
+    
+        $.ajax({
+            method:'get',
+            url: url, 
+            data:dados,
+            dataType:'json',
+            success: function(data) {
+                abrirModalEditarTarefa();
+                $('#nomeTarefa').val(data.nome);
+                $('#ritmoTarefa').val(data.ritmo);
+                $('#interferenciaTarefa').val(data.interferencia);
+                $('#concecessaoTarefa').val(data.concessoes);
+                $('#QtdTarefa').val(data.qtdVezes);
+                $('#porPcTarefa').val(data.porPeca);
+>>>>>>> origin/master
                 
             },
             error:function (argument){

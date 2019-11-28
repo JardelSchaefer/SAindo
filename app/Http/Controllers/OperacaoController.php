@@ -13,8 +13,12 @@ class OperacaoController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
                $operacoes = \App\Operacao::get();
                return view('operacao.index', compact('operacoes'));
+=======
+               return view("operacao.index");
+>>>>>>> origin/master
 
     }
 

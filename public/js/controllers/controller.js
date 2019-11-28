@@ -189,8 +189,12 @@ function atualizarTabelaProduto (){
 }
 
 
+<<<<<<< HEAD
 // <---------------------------- Funções produtos -------------------------->
 
 function abrirModalIncluir() {
     $('#abrirModalIncluir').modal('show');
 }
+=======
+// <---------------------------- Funções produtos -------------------------->
+>>>>>>> origin/master
