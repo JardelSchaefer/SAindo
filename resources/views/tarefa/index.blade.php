@@ -14,6 +14,11 @@
                             <tr>
                                 <th scope="col">Código</th>
                                 <th scope="col">Tarefa</th>
+                                <th scope="col">Ritmo</th>
+                                <th scope="col">Interferência</th>
+                                <th scope="col">Concessões</th>
+                                <th scope="col">Qtd. vezes</th>
+                                <th scope="col">Por peça</th>
                                 <th scope="col">
 
                                 </th>
